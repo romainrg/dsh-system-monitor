@@ -1,0 +1,61 @@
+{
+  "name": "dsh-system-monitor",
+  "version": "1.0.0",
+  "description": "A thirteen-tab workspace for the DSH Web GUI: machine vitals, Docker, Kubernetes, processes, network, host security, GitHub, Confluence, Jira, project KPIs, and a tech/cyber watch.",
+  "license": "MIT",
+  "author": "Romain Gallien",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dashboard",
+    "monitoring",
+    "kubernetes",
+    "docker",
+    "jira",
+    "confluence",
+    "github",
+    "cve"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/collector.js",
+    "lib/jira.js",
+    "lib/workspace.js",
+    "lib/feed.js",
+    "lib/todos.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "docs/*.png",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node tools/host-test.mjs",
+    "probe": "node tools/probe.mjs",
+    "render": "node tools/render.mjs",
+    "render:demo": "DSM_RENDER_DEMO=1 node tools/render.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

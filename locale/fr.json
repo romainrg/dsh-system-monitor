@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Moniteur d’atelier",
+    "description": "Treize onglets pour cette machine et ton travail : métriques, Docker, Kubernetes, processus, réseau, sécurité du poste, GitHub, Confluence, Jira, KPI projet et une veille tech/cyber."
+  }
+}
